@@ -1,10 +1,10 @@
 module Queries
   class FetchItem < Queries::BaseQuery
     type Types::ItemType, null: false
-    argument :id, ID, required: true
+    argument :item_id, ID, required: true
 
-    def resolve(id:)
-      Item.find(id)
+    def resolve(item_id:)
+      Item.fetchId(item_id)
     end
   end 
 end

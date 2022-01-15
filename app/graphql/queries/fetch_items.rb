@@ -3,7 +3,7 @@ module Queries
     type [Types::ItemType], null: false
 
     def resolve
-      Item.all.order(created_at: :desc)
+      Item.fetchAll
     end
   end 
 end
