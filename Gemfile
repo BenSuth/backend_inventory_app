@@ -44,6 +44,8 @@ gem "bootsnap", require: false
 
 gem "graphql", "1.13.5"
 
+gem "aws-sdk", "3.1.0"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
