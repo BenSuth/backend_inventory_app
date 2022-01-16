@@ -1,6 +1,6 @@
 module Types
   module Input
-    class UpdateItemInputType < Types::BaseInputObject
+    class ItemUpdateType < Types::BaseInputObject
       argument :name, String, required: false
       argument :description, String, required: false
       argument :count, Integer, required: false

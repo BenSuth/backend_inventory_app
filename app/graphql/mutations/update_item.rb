@@ -1,6 +1,6 @@
 module Mutations 
   class UpdateItem < Mutations::BaseMutation
-    argument :params, Types::Input::UpdateItemInputType, required: true
+    argument :params, Types::Input::ItemUpdateType, required: true
     argument :item_id, ID, required: true
     field :item, Types::ItemType, null: false
 
