@@ -5,5 +5,8 @@ module Types
 
     field :fetch_items, resolver: Queries::FetchItems
     field :fetch_item, resolver: Queries::FetchItem
+
+    field :fetch_exports, resolver: Queries::FetchExports
+    field :fetch_export, resolver: Queries::FetchExport
   end
 end
