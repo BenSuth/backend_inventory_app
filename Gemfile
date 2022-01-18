@@ -46,6 +46,8 @@ gem "graphql", "1.13.5"
 
 gem "aws-sdk", "3.1.0"
 
+gem "rack-cors"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
