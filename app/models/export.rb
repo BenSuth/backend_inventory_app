@@ -1,4 +1,6 @@
 class Export < ApplicationRecord
+  validates :external_name, presence: true, length: {minimum:1, maximum:80}
+  
   def self.fetchAll
     Export.all
   end
