@@ -1,5 +1,7 @@
 class Export < ApplicationRecord
   validates :external_name, presence: true, length: {minimum:1, maximum:80}
+  validates :path, presence: true, format: {with: /https:\/\/backend-inventory-app.s3.us-east-2.amazonaws.com\/.*/}
+  validates :size, presence: true, format: {with: /\d+\sbytes/}
   
   def self.fetchAll
     Export.all
@@ -11,6 +13,7 @@ class Export < ApplicationRecord
 
   def self.insert(params)
     export = Export.create!(params)
+    params["id"] = export["id"]
     params
   end
 
