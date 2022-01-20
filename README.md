@@ -8,7 +8,7 @@ The front-end web application (React app) source code: https://github.com/BenSut
 Things you may want to cover:
 
 ## Requirements
-- ruby 3.0.3
+- Ruby 3.0.3
 - Rails ~> 7.0.1
 - Postgres 12  
 
@@ -92,5 +92,33 @@ mutation {
   }
 }
 ```
+  
+- Fetch all items
+ ```
+query {
+  fetchItems {
+    id
+    name
+    count
+    description
+    tags
+  }
+}
+```
+  
+- Fetch item by ID
+ ```
+query {
+  fetchItem(itemId: 1) {
+    id
+    name
+    count
+    description
+    tags
+  }
+}
+```
+  
+
 
 
