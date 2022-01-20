@@ -19,10 +19,9 @@ default: &default
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
-  host: localhost
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: backend_inventory_app
-  password: <%= ENV['BACKEND_INVENTORY_APP_DATABASE_PASSWORD'] %>
+  # username: backend_inventory_app
+  # password: <%= ENV['BACKEND_INVENTORY_APP_DATABASE_PASSWORD'] %>
 development:
   <<: *default
   database: backend_inventory_app_development

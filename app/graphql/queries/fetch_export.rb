@@ -4,7 +4,7 @@ module Queries
     argument :export_id, ID, required: true
 
     def resolve(export_id:)
-      Export.fetchId(item_id)
+      Export.fetchId(export_id)
     end
   end 
 end

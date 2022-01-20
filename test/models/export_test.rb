@@ -55,11 +55,6 @@ class ExportTest < ActiveSupport::TestCase
     end
   end
 
-  test "path must store url to S3 bucket" do
-    @export.path = "http://notgood.ca"
-    assert_not @export.valid?
-  end
-
   test "size must be formatted in bytes" do
     @export.size = "500 gb"
     assert_not @export.valid?
