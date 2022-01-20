@@ -192,6 +192,15 @@ query {
 - fetchItems will return all non-deleted items in the database
 - fetchItem will return the item from the Items table with the specified itemId
 ### Export Data to a CSV
+- Graphql mutation, createExport, handles post requests with this mutation
+- In development / test environments, all storage is handled locally in /tmp/storage directory
+- In production, the CSV generation is tied to an AWS S3 bucket.
+- When createExport runs, it opens a new file stream to the S3 bucket,
+  then writes the Item/Tag data from the tables into the file on the S3 bucket.
+- It then stores the name, size, url in the Exports table
+- This allows for great efficieny gains, as an end-user does not need to re-export old reports
+- This also enables fetchExport and fetchExports (function identically to fetchItem and fetchItems queries)
+  to retrieve data from the Exports table
   
 
 
