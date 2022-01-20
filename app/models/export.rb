@@ -2,9 +2,6 @@ require "csv"
 
 class Export < ApplicationRecord
   validates :external_name, presence: true, length: {minimum:1, maximum:80}
-  if Rails.env.production?
-    validates :path, presence: true, format: {with: /https:\/\/backend-inventory-app.s3.us-east-2.amazonaws.com\/.*/}
-  end
   validates :size, presence: true, format: {with: /\d+\sbytes/}
   
   def self.fetchAll
