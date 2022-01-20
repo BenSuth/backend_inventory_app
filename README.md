@@ -166,6 +166,11 @@ query {
   }
 }
 ```
+## Requirement Implementation
+### Create Inventory Items
+### Update Inventory Items
+### Delete Inventory Items
+### View Inventory Items
   
 
 
