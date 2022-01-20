@@ -5,7 +5,6 @@ This is my submission for the Shopify Backend Developer Intern Challenge - Summe
 You can view / tryout the full stack application at: https://bensuth.github.io/frontend-inventory-app/
 
 The front-end web application (React app) source code: https://github.com/BenSuth/frontend-inventory-app
-Things you may want to cover:
 
 ## Requirements
 - Ruby 3.0.3
