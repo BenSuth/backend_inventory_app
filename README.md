@@ -14,6 +14,7 @@ Things you may want to cover:
 
 ## Deployment
 Backend - Heroku
+
 Frontend - Github Pages
 
 # Production Endpoint
