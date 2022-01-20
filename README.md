@@ -31,6 +31,7 @@ Things you may want to cover:
 ## GraphiQL Playground
 - Navigate to http://localhost:3000/graphiql
 - This is a test environment for graphql end-points
+- Only available in test environment (local server)
 
 ### Example Queries and Mutations
 - Create a new item
@@ -115,6 +116,45 @@ query {
     count
     description
     tags
+  }
+}
+```
+- Create a new .csv file
+```
+mutation {
+  createExport (input: {
+    	params: {
+        externalName: "SampleFileName"
+      }
+  }) {
+    path
+  }
+}
+```
+- Fetch all .csv files
+```
+query {
+  fetchExports {
+    id
+    externalName
+    internalName
+    path
+    size
+    fileType
+  }
+}
+```
+  
+- Fetch .csv by ID
+```
+query {
+  fetchExport(exportId:1) {
+    id
+    externalName
+    internalName
+    path
+    size
+    fileType
   }
 }
 ```
