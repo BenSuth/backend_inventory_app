@@ -168,9 +168,26 @@ query {
 ```
 ## Requirement Implementation
 ### Create Inventory Items
+- Graphql mutation, createItem, handles post requests with this mutation in the body
+- Post request body must contain all required fields, such as name, count, etc.
+- Creates a new entry in the Items table, and an associated tag in the Tags table
+- Returns an error if validations on Item model are violated
 ### Update Inventory Items
+- Graphql mutation, updateItem, handles post requests with this mutation in the body
+- Post request body can contain some or all fields, such as name, count, etc.
+- Post request body must contain the ID of the item
+- Finds and updates the table with the fields in the request body
+- If tags field is present, it will propogate the changes to the associated Tag row in Tags table
+- Each Item has_one Tag
+- Returns an error if validations on Item model are violated
 ### Delete Inventory Items
+- Graphql mutation, deleteItem, handles post requests with this mutation in the body
+- Post request body must contain the ID of the item
+- Finds the item in the Items table and deletes it, this is propogated to the associated tag in Tags table as well.
+- If tags field is present, it will propogate the changes to the associated Tag row in Tags table
+- Returns an error if validations on Item model are violated
 ### View Inventory Items
+### Export Data to a CSV
   
 
 
