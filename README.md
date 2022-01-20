@@ -27,4 +27,70 @@ Things you may want to cover:
 - rails db:migrate
 - (Optional) rails test
 - rails server
+  
+## GraphiQL Playground
+- Navigate to http://localhost:3000/graphiql
+- This is a test environment for graphql end-points
+
+### Example Queries and Mutations
+- Create a new item
+ ```
+mutation {
+  createItem(input: {
+    params: {
+      name: "Sample Name"
+      description: "Sample Description"
+      count: 20
+      tags: ["Sample", "List", "Tags"]
+    }
+  }) {
+      item {
+        id
+        name
+        description
+        count
+        tags
+    }
+  }
+}
+```
+- Update an existing item
+ ```
+mutation {
+  updateItem(input: {
+    itemId: 1
+  	params: {
+      name: "Sample Name Update"
+      description: "Sample Description Update"
+      count: 20
+      tags: ["Sample", "List", "Tags"]
+    }
+  }) {
+      item {
+        id
+        name
+        description
+        count
+        tags
+    }
+  }
+}
+```
+- Delete an existing item
+ ```
+mutation {
+  deleteItem(input: {
+    itemId: 1
+  }) {
+      item {
+        id
+        name
+        description
+        count
+        tags
+    }
+  }
+}
+```
+
 
