@@ -17,7 +17,7 @@ Backend - Heroku
 Frontend - Github Pages
 
 # Production Endpoint
-- Backend: https://ben-sutherland-inventory-app.herokuapp.com/graphql
+Backend: https://ben-sutherland-inventory-app.herokuapp.com/graphql
 
 ## Setup
 - git clone https://github.com/BenSuth/backend_inventory_app.git
