@@ -12,6 +12,13 @@ Things you may want to cover:
 - Rails ~> 7.0.1
 - Postgres 12  
 
+## Deployment
+Backend - Heroku
+Frontend - Github Pages
+
+# Production Endpoint
+- Backend: https://ben-sutherland-inventory-app.herokuapp.com/graphql
+
 ## Setup
 - git clone https://github.com/BenSuth/backend_inventory_app.git
 - cd backend_inventory_app
