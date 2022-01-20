@@ -20,7 +20,7 @@ class Export < ApplicationRecord
 
   def self.generateCSV(external_name)
     internal_name = "#{Time.now}_export.csv";
-    if Rails.env.development? || rails.env.test?
+    if Rails.env.development? || Rails.env.test?
       return self.generateCSVLocalStorage(external_name, internal_name)
     end
     client = Aws::S3::Client.new(
