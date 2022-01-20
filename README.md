@@ -201,6 +201,9 @@ query {
 - This allows for great efficieny gains, as an end-user does not need to re-export old reports
 - This also enables fetchExport and fetchExports (function identically to fetchItem and fetchItems queries)
   to retrieve data from the Exports table
+- This AWS S3 bucket integration was done intentionally with how future files, images, pdfs, etc.
+  features may be implemented.  These files generally should not be stored in a database, so having 
+  an active storage solution will make future file type features easily integrateable.
   
 
 
